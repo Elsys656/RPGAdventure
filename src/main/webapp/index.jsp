@@ -14,7 +14,7 @@ this a few different ways and likely this is going to change at some point>
     <body>
         <form id="#characterSubmit" action="characterSubmit">
         <label for="classes">Choose Your Class:</label>
-        <select id="classes" name="class" onchange="">
+        <select id="classes" name="class" onchange="this.form.submit()">
             <!forloop pulling classlist from our java and defining the result variable as playerClass>
             <!calls properties can be accessed using either # or $ along with the special tags provided in taglib>
             <c:forEach items="${p.classList()}" var="playerClass">
