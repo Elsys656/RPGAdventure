@@ -13,8 +13,11 @@ import java.util.HashMap;
 public class Player {
     String playerName, playerClass;
     int playerLevel, playerStrength, playerDexterity, playerIntel, playerHealth, playerHP, playerXP, choice, stats;
-    String[] entityClasses = new String[] {"Fighter","Mage","Theif","Healer"};
-            
+    /*Lets setup class list here just easier to change here further down we have a method that spits this out however 
+    nowhere in program execution will we need to change the classes*/
+    
+    String[] classList = new String[] {"Fighter","Mage","Thief","Healer"};
+    
    public Player() {
        setPlayerLevel(1);
        setPlayerXP(0);  
@@ -27,7 +30,9 @@ public class Player {
        public void setPlayerName(String playerName){
         this.playerName = playerName;
     }
-    
+    public String[] classList(){
+        return classList;
+    }
     public String getPlayerName(){
         return playerName;
     }
@@ -92,4 +97,4 @@ public class Player {
     public int getPlayerIntel(){
         return playerIntel;
     }
-}
+} 
